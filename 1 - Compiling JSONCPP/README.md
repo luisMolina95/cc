@@ -1,0 +1,1 @@
+I compile the library JSONCPP manually
