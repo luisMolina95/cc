@@ -1,3 +1,5 @@
 .vscode
 *.out
 *.o
+ignore
+*build
