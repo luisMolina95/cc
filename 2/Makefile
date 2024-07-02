@@ -6,3 +6,7 @@ utils.o:
 
 main.o:
 	g++ main.cc -c
+
+clean:
+	rm -f *.o
+	rm -f main.out
