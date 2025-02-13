@@ -12,7 +12,7 @@ int main() {
     myObject.displayMessage();
 
     // Modify the name attribute directly
-    myObject.name = "Bob";
+    myObject.name = "Bob!";
     
 
     // Display the message again
