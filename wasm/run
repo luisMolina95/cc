@@ -1,0 +1,3 @@
+python -m http.server 8080
+
+clang -Wall -Wextra -ggdb main.c --no-standard-libraries --target=wasm32 -Wl,--no-entry -Wl,--export=main -o main.wasm
