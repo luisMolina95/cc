@@ -1,1 +1,0 @@
-clang --target=wasm32 -c lib.c -o lib.o

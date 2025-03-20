@@ -3,8 +3,7 @@
 
 
 int main() {
-    // Allocate memory blocks
-    float *ptr1 = malloc(0); // 100 integers
+    float *ptr1 = malloc(0);
     
     ptr1[0] = 7;
     ptr1[1] = 8;

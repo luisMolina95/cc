@@ -1,0 +1,4 @@
+python -m http.server 8080
+
+clang -Wall -Wextra -ggdb main.c --no-standard-libraries --target=wasm32 -Wl,--no-entry -Wl,--allow-undefined -Wl,--export=main -o main.wasm
+emcc main.c -o index.html -I./include -L./lib -lSDL3 (don't know where to get string to do it just with clang)
