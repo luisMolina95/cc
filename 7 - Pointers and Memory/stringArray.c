@@ -37,6 +37,11 @@ void concatenate(char **s1, char **s2)
     unsigned int s2Length = length(*s2);
     unsigned int newLength = s1OldLength + s2Length;
 
+    if (!newLength)
+    {
+        return;
+    }
+
     char *newS = malloc((newLength + 1) * sizeof(char));
     for (unsigned int i = 0; i < s1OldLength; i++)
     {
@@ -56,22 +61,25 @@ int main()
 {
     printf("Start\n");
     char *a = malloc(5 * sizeof(char));
-    a[0] = 't';
-    a[1] = 'e';
-    a[2] = 's';
-    a[3] = 't';
-    a[4] = 0;
+    a[0] = 0;
 
     char *b = malloc(4 * sizeof(char));
-    b[0] = 'b';
-    b[1] = 'e';
-    b[2] = 'd';
-    b[3] = 0;
+    b[0] = 0;
 
     printf("a: %s\n", a);
+    printf("b: %s\n", b);
 
-    concatenate(&a, &b);
+    concatenate(&b, &a);
     printf("a: %s\n", a);
+    printf("b: %s\n", b);
+
+    printf("a: %p\n", &a);
+    printf("a: %p\n", (void *)a);
+    printf("a: %p\n", &a[0]);
+
+    printf("b: %p\n", &b);
+    printf("b: %p\n", &b[0]);
+    printf("b: %p\n", (void *)b);
 
     printf("End\n");
 
