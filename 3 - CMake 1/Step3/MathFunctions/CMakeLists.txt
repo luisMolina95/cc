@@ -6,13 +6,13 @@ add_library(MathFunctions MathFunctions.cxx)
 
 # should we use our own math functions
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
-if (USE_MYMATH)
+if(USE_MYMATH)
   target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 
   # library that just does sqrt
   add_library(SqrtLibrary STATIC
-              mysqrt.cxx
-              )
+    mysqrt.cxx
+  )
 
   # TODO 6: Link SqrtLibrary to tutorial_compiler_flags
 
