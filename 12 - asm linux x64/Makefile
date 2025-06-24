@@ -2,7 +2,7 @@
 
 all: example.out
 
-example.o:
+example.o: example.asm
 	nasm -f elf64 example.asm -o example.o
 
 example.out: example.o
