@@ -1,5 +1,7 @@
 .vscode
 *.out
 *.o
+*.obj
+*.exe
 ignore
 *build

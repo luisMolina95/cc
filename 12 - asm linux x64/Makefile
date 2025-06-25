@@ -24,5 +24,17 @@ rungas: example.gas.out
 	./example.gas.out
 	@echo "Exit code: $$?"
 
+wingas: example.win.gas.exe
+
+example.win.gas.obj: example.win.gas.s
+	as --64 example.win.gas.s -o example.win.gas.obj
+
+example.win.gas.exe: example.win.gas.obj
+	ld example.win.gas.obj -o example.win.gas.exe -L"D:\bins\mingw64\x86_64-w64-mingw32\lib" -lkernel32
+
+runwingas: example.win.gas.exe
+	./example.gas.win.exe
+	@echo "Exit code: $$?"
+
 clean:
 	rm -f example.o example.out example.gas.o example.gas.out
