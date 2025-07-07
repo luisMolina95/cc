@@ -34,7 +34,7 @@ example.win.gas.exe: example.win.gas.obj
 
 runwingas: example.win.gas.exe
 	./example.win.gas.exe
-	@echo "Exit code: $$?"
+	@echo "\nExit code: $$?"
 
 clean:
 	rm -f example.o example.out example.gas.o example.gas.out
