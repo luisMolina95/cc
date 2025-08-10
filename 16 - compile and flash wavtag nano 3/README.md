@@ -1,0 +1,1 @@
+https://github.com/paraplin/wavgat-board?tab=readme-ov-file
