@@ -30,7 +30,7 @@ example.win.gas.obj: example.win.gas.s
 	as --64 -g  -gdwarf-2  example.win.gas.s -o example.win.gas.obj
 
 example.win.gas.exe: example.win.gas.obj
-	ld example.win.gas.obj -o example.win.gas.exe -L"D:\bins\mingw64\x86_64-w64-mingw32\lib" -lkernel32
+	ld -g example.win.gas.obj -o example.win.gas.exe -L"D:\bins\mingw64\x86_64-w64-mingw32\lib" -lkernel32
 
 runwingas: example.win.gas.exe
 	./example.win.gas.exe
