@@ -1,1 +1,1 @@
-https://github.com/paraplin/wavgat-board?tab=readme-ov-file
+- [WAVGAT-BOARD](https://github.com/paraplin/wavgat-board) – Add WAVGAT boards to the Arduino IDE via board manager.
