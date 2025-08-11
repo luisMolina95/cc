@@ -31,7 +31,11 @@ avr-g++ \
     -o "build/blink.cpp.o"
 echo Compiling libraries...
 # Compiling core...
-source core.bash
+if [ -e "build/core/core.a" ]; then
+    echo "Core found in build/core/core.a"
+else
+    source core.bash
+fi
 echo Linking everything together...
 avr-gcc -w -Os -Wl,--gc-sections -mmcu=atmega328p -o "build/blink.elf" "build/blink.cpp.o" "build/core/core.a" -L"build/" -lm
 avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 "build/blink.elf" "build/blink.eep"
