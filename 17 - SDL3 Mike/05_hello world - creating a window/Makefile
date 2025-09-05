@@ -7,11 +7,16 @@ main.obj: main.c
 	cl /Zi /c /I..\00_SDL3\include main.c /Fomain.obj
 
 main.exe: main.obj
-	link /DEBUG main.obj /LIBPATH:..\00_SDL3\lib\x64 SDL3.lib
+	link /DEBUG main.obj /LIBPATH:..\00_SDL3\lib\x64 SDL3.lib /OUT:main.exe
 
 run: main.exe
-	set PATH=..\00_SDL3\lib\x64;%PATH%
+	set PATH=..\00_SDL3\lib\x64;%PATH% &&
 	main
 
 clear:
 	del /F main.exe main.obj main.ilk main.pdb vc140.pdb
+
+debug: main.exe
+	set PATH=..\00_SDL3\lib\x64;%PATH% &&
+	windbg main
+	
