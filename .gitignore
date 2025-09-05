@@ -3,5 +3,7 @@
 *.o
 *.obj
 *.exe
+*.ilk
+*.pdb
 ignore
 *build
