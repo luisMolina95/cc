@@ -18,5 +18,5 @@ clear:
 
 debug: main.exe
 	set PATH=..\00_SDL3\lib\x64;%PATH% &&
-	windbg main
+	windbg -srcpath . -c ".open main.c" main.exe
 	
