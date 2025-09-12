@@ -17,7 +17,7 @@ run: $(EXC)/$(EXC).out
 	./$(EXC)/$(EXC).out
 
 gdb: $(EXC)/$(EXC).out
-	gdb ./$(EXC)/$(EXC).out
+	gdb ./$(EXC)/$(EXC).out -x $(EXC).gdb
 
 clean:
 	rm -fr $(EXC)
