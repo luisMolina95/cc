@@ -7,3 +7,4 @@
 *.pdb
 ignore
 *build
+*node_modules
