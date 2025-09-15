@@ -1,0 +1,116 @@
+molina@DESKTOP-KFS5OG1 MINGW64 ~/Desktop/cc/18 - node c plugin/windows (main)
+$ node-gyp build --verbose
+gyp info it worked if it ends with ok
+gyp verb cli [
+gyp verb cli 'D:\\Program Files\\nodejs\\node.exe',
+gyp verb cli 'C:\\Users\\molina\\AppData\\Roaming\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js',
+gyp verb cli 'build',
+gyp verb cli '--verbose'
+gyp verb cli ]
+gyp info using node-gyp@11.2.0
+gyp info using node@22.17.1 | win32 | x64
+gyp verb build type Release
+gyp verb architecture x64
+gyp verb node dev dir C:\Users\molina\AppData\Local\node-gyp\Cache\22.17.1
+gyp verb python D:\Program Files\Python313\python3.13t.exe
+gyp verb found first Solution file build/binding.sln
+gyp verb using MSBuild: D:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe
+gyp info spawn D:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe
+gyp info spawn args [
+gyp info spawn args 'build/binding.sln',
+gyp info spawn args '/nologo',
+gyp info spawn args '/nodeReuse:false',
+gyp info spawn args '/p:Configuration=Release;Platform=x64'
+gyp info spawn args ]
+Build started 9/15/2025 9:31:32 AM.
+
+Project "C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\binding.sln" on nod
+e 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Release|x64".
+Project "C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\binding.sln" (1) is
+ building "C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\addon.vcxproj" (2 
+) on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Release\obj\addon\".
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the  
+  error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+  Creating directory "Release\obj\addon\addon.tlog\".
+InitializeBuildStatus:
+  Creating "Release\obj\addon\addon.tlog\unsuccessfulbuild" because "AlwaysCreate" was s 
+  pecified.
+  Touching "Release\obj\addon\addon.tlog\unsuccessfulbuild".
+MakeDirsForCl:
+  Creating directory "C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\Releas 
+  e\obj\addon\src".
+ClCompile:
+  D:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.352
+  07\bin\HostX64\x64\CL.exe /c /I"C:\Users\molina\AppData\Local\node-gyp\Cache\22.17.1\i 
+  nclude\node" /I"C:\Users\molina\AppData\Local\node-gyp\Cache\22.17.1\src" /I"C:\Users\ 
+  molina\AppData\Local\node-gyp\Cache\22.17.1\deps\openssl\config" /I"C:\Users\molina\Ap 
+  pData\Local\node-gyp\Cache\22.17.1\deps\openssl\openssl\include" /I"C:\Users\molina\Ap 
+  pData\Local\node-gyp\Cache\22.17.1\deps\uv\include" /I"C:\Users\molina\AppData\Local\n 
+  ode-gyp\Cache\22.17.1\deps\zlib" /I"C:\Users\molina\AppData\Local\node-gyp\Cache\22.17 
+  .1\deps\v8\include" /Z7 /nologo /W3 /WX- /diagnostics:column /MP /Ox /Ob2 /Oi /Ot /Oy  
+  /GL /D NODE_GYP_MODULE_NAME=addon /D USING_UV_SHARED=1 /D USING_V8_SHARED=1 /D V8_DEPR 
+  ECATION_WARNINGS=1 /D _GLIBCXX_USE_CXX11_ABI=1 /D _FILE_OFFSET_BITS=64 /D WIN32 /D _CR 
+  T_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _HAS_EXCEPTIONS=0 /D NOMINMAX /D 
+   OPENSSL_NO_PINSHARED /D OPENSSL_THREADS /D BUILDING_NODE_EXTENSION /D "HOST_BINARY=\" 
+  node.exe\"" /D _WINDLL /GF /Gm- /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:i 
+  nline /GR- /Fo"Release\obj\addon\\src\addon.obj" /Fd"Release\obj\addon\vc143.pdb" /ext 
+  ernal:W3 /Gd /TP /wd4351 /wd4355 /wd4800 /wd4251 /wd4275 /wd4244 /wd4267 /FC /errorRep 
+  ort:queue /Zc:__cplusplus -std:c++20 /Zm2000 ..\src\addon.cc
+  addon.cc
+  D:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.352
+  07\bin\HostX64\x64\CL.exe /c /I"C:\Users\molina\AppData\Local\node-gyp\Cache\22.17.1\i 
+  nclude\node" /I"C:\Users\molina\AppData\Local\node-gyp\Cache\22.17.1\src" /I"C:\Users\
+  molina\AppData\Local\node-gyp\Cache\22.17.1\deps\openssl\config" /I"C:\Users\molina\Ap 
+  pData\Local\node-gyp\Cache\22.17.1\deps\openssl\openssl\include" /I"C:\Users\molina\Ap 
+  pData\Local\node-gyp\Cache\22.17.1\deps\uv\include" /I"C:\Users\molina\AppData\Local\n 
+  ode-gyp\Cache\22.17.1\deps\zlib" /I"C:\Users\molina\AppData\Local\node-gyp\Cache\22.17 
+  .1\deps\v8\include" /Z7 /nologo /W3 /WX- /diagnostics:column /MP /Ox /Ob2 /Oi /Ot /Oy  
+  /GL /D NODE_GYP_MODULE_NAME=addon /D USING_UV_SHARED=1 /D USING_V8_SHARED=1 /D V8_DEPR 
+  ECATION_WARNINGS=1 /D _GLIBCXX_USE_CXX11_ABI=1 /D _FILE_OFFSET_BITS=64 /D WIN32 /D _CR 
+  T_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _HAS_EXCEPTIONS=0 /D NOMINMAX /D 
+   OPENSSL_NO_PINSHARED /D OPENSSL_THREADS /D BUILDING_NODE_EXTENSION /D "HOST_BINARY=\" 
+  node.exe\"" /D _WINDLL /GF /Gm- /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:i 
+  nline /GR- /Fo"Release\obj\addon\\" /Fd"Release\obj\addon\vc143.pdb" /external:W3 /Gd  
+  /TP /wd4351 /wd4355 /wd4800 /wd4251 /wd4275 /wd4244 /wd4267 /FC /errorReport:queue /Zc 
+  :__cplusplus -std:c++20 /Zm2000 "C:\Users\molina\Desktop\cc\18 - node c plugin\windows 
+  \node_modules\node-gyp\src\win_delay_load_hook.cc"
+  win_delay_load_hook.cc
+Link:
+  D:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.352
+  07\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\molina\Desktop\cc\18 - n 
+  ode c plugin\windows\build\Release\addon.node" /INCREMENTAL:NO /NOLOGO kernel32.lib us 
+  er32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut 
+  32.lib uuid.lib odbc32.lib delayimp.lib "C:\\Users\\molina\\AppData\\Local\\node-gyp\\ 
+  Cache\\22.17.1\\x64\\node.lib" Delayimp.lib /DELAYLOAD:node.exe /MANIFEST /MANIFESTUAC 
+  :"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\molina\Des 
+  ktop\cc\18 - node c plugin\windows\build\Release\addon.pdb" /OPT:REF /OPT:ICF /TLBID:1 
+   /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /LTCG:INCREMENTAL /ignore:4199 /DLL Release\obj\a 
+  ddon\win_delay_load_hook.obj
+  Release\obj\addon\\src\addon.obj
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 221 functions were compiled because no usable IPDB/IOBJ from previous compilation 
+  was found.
+  Finished generating code
+  addon.vcxproj -> C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\Release\\
+  addon.node
+FinalizeBuildStatus:
+  Deleting file "Release\obj\addon\addon.tlog\unsuccessfulbuild".
+  Touching "Release\obj\addon\addon.tlog\addon.lastbuildstate".
+Done Building Project "C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\addon 
+.vcxproj" (default targets).
+
+Done Building Project "C:\Users\molina\Desktop\cc\18 - node c plugin\windows\build\bindi 
+ng.sln" (default targets).
+
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.96
+gyp info ok
