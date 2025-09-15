@@ -1,1 +1,1 @@
-const all = require("./addon.node");
+const all = require("./build/release/addon.node");

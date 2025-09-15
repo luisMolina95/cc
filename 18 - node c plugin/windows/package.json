@@ -4,14 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "configure": "node-gyp configure --verbose",
-    "build": "node-gyp build --verbose"
+    "install": "node-gyp install --loglevel=silly --devdir=./node-gyp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "node-gyp": "^11.4.2"
+    "node-gyp": "latest"
   }
 }
