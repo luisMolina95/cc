@@ -29,14 +29,15 @@ dAns16 dd 0
 dAns17 dd 0
 dAns18 dd 0
 dRem18 dd 0
-dNum1 dd -1
-dNum2 dd 2
-dNum3 dd -1
-dNum4 dd -1
-qNum1 dq 9999999999999
+dNum1 dd 262140
+dNum2 dd 131070
+dNum3 dd 65535
+dNum4 dd 65535
+qNum1 dq 1844546515616515
 section .text
 global _start
 _start:
+    mov rax, QWORD [qNum1]
 ; 1. dAns1 = dNum1 + dNum2
     mov eax, DWORD [dNum1]
     add eax, DWORD [dNum2]
