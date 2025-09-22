@@ -84,18 +84,17 @@ _start:
     mov word [dAns13], ax
     mov word [dAns13 + 2], dx
 ; 10. wAns16 = wNum1 / wNum2
+    mov dx, 0
     mov ax, word [wNum1]
-    cwd
     div word [wNum2]
     mov word [wAns16], ax
 ; 11. wAns17 = wNum3 / wNum4
+    mov dx, 0
     mov ax, word [wNum3]
-    cwd
     div word [wNum4]
     mov word [wAns17], ax
 ; 12. wAns18 = dNum1 / wNum4
-    ; mov eax, dword [dNum1]
-    ; cwd
+    mov dx, 0
     mov ax, word [dNum1]
     mov dx, word [dNum1 + 2]
     div word [wNum4]
