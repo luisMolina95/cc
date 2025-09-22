@@ -1,0 +1,1 @@
+# How to Compile a C++ Addon for Node.js on Windows and Linux Without Using Node-Gyp

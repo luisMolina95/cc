@@ -7,3 +7,5 @@
 *.pdb
 ignore
 *build
+*node_modules
+*node-gyp
