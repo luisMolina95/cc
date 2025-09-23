@@ -24,7 +24,7 @@ sum:
     inc ecx
     cmp ecx, DWORD [n]
     jbe sum
-    mov QWORD [result], rsi
+    mov QWORD [result], rbx
 last:
     mov rax, 60
     mov rdi, 0
