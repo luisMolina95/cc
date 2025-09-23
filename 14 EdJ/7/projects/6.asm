@@ -1,20 +1,6 @@
-; Create a program to complete the following expressions using unsigned double-
-; word sized variables. Note, the first letter of the variable name denotes the size
-; (d → double-word and q → quadword).
-; 1. dAns1 = dNum1 + dNum2
-; 2. dAns2 = dNum1 + dNum3
-; 3. dAns3 = dNum3 + dNum4
-; 4. dAns6 = dNum1 - dNum2
-; 5. dAns7 = dNum1 - dNum3
-; 6. dAns8 = dNum2 - dNum4
-; 7. qAns11 = dNum1 * dNum3
-; 8. qAns12 = dNum2 * dNum2
-; 9. qAns13 = dNum2 * dNum4
-; 10. dAns16 = dNum1 / dNum2
-; 11. dAns17 = dNum3 / dNum4
-; 12. dAns18 = qNum1 / dNum4
-; 13. dRem18 = qNum1 % dNum4
-
+; Repeat the previous program using signed values and signed operations. Use the
+; debugger to execute the program and display the final results. Create a debugger
+; input file to show the results in both decimal and hexadecimal.
 section .data
 dAns1 dd 0
 dAns2 dd 0
@@ -31,9 +17,9 @@ dAns18 dd 0
 dRem18 dd 0
 dNum1 dd 262140
 dNum2 dd 131070
-dNum3 dd 65535
+dNum3 dd -65535
 dNum4 dd 65535
-qNum1 dq 1844546515616515
+qNum1 dq -65535
 section .text
 global _start
 _start:
@@ -63,33 +49,33 @@ _start:
     mov DWORD [dAns8], eax
 ; 7. qAns11 = dNum1 * dNum3
     mov eax, DWORD [dNum1]
-    mul DWORD [dNum3]
+    imul DWORD [dNum3]
     mov DWORD [qAns11], eax
     mov DWORD [qAns11 + 4], edx
 ; 8. qAns12 = dNum2 * dNum2
     mov eax, DWORD [dNum2]
-    mul DWORD [dNum2]
+    imul DWORD [dNum2]
     mov DWORD [qAns12], eax
     mov DWORD [qAns12 + 4], edx
 ; 9. qAns13 = dNum2 * dNum4
     mov eax, DWORD [dNum2]
-    mul DWORD [dNum4]
+    imul DWORD [dNum4]
     mov DWORD [qAns13], eax
     mov DWORD [qAns13 + 4], edx
 ; 10. dAns16 = dNum1 / dNum2
-    mov edx, 0
     mov eax, DWORD [dNum1]
-    div DWORD [dNum2]
+    cdq
+    idiv DWORD [dNum2]
     mov DWORD [dAns16], eax
 ; 11. dAns17 = dNum3 / dNum4
-    mov edx, 0
     mov eax, DWORD [dNum3]
-    div DWORD [dNum4]
+    cdq
+    idiv DWORD [dNum4]
     mov DWORD [dAns17], eax
 ; 12. dAns18 = qNum1 / dNum4
     mov eax, DWORD [qNum1]
     mov edx, DWORD [qNum1 + 4]
-    div DWORD [dNum4]
+    idiv DWORD [dNum4]
     mov DWORD [dAns18], eax
 ; 13. dRem18 = qNum1 % dNum4
     mov DWORD [dRem18], edx

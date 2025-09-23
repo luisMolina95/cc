@@ -39,20 +39,20 @@ echo \n
 
 # 7. qAns11 = dNum1 * dNum3
 echo 7. qAns11 = dNum1 * dNum3\n
-printf "7. %06u = %05u * %05u\n", (unsigned int)qAns11, (unsigned int)dNum1, (unsigned int)dNum3
-x/uw &qAns11
+printf "7. %06lu = %05u * %05u\n", (unsigned int)qAns11, (unsigned int)dNum1, (unsigned int)dNum3
+x/ug &qAns11
 echo \n
 
 # 8. qAns12 = dNum2 * dNum2
 echo 8. qAns12 = dNum2 * dNum2\n
-printf "8. %06u = %05u * %05u\n", (unsigned int)qAns12, (unsigned int)dNum2, (unsigned int)dNum2
-x/uw &qAns12
+printf "8. %06lu = %05u * %05u\n", (unsigned int)qAns12, (unsigned int)dNum2, (unsigned int)dNum2
+x/ug &qAns12
 echo \n
 
 # 9. qAns13 = dNum2 * dNum4
 echo 9. qAns13 = dNum2 * dNum4\n
-printf "9. %06u = %05u * %05u\n", (unsigned int)qAns13, (unsigned int)dNum2, (unsigned int)dNum4
-x/uw &qAns13
+printf "9. %06lu = %05u * %05u\n", (unsigned int)qAns13, (unsigned int)dNum2, (unsigned int)dNum4
+x/ug &qAns13
 echo \n
 
 # 10. dAns16 = dNum1 / dNum2
