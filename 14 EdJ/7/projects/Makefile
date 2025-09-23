@@ -20,4 +20,4 @@ gdb: $(EXC)/$(EXC).out
 	gdb ./$(EXC)/$(EXC).out -x $(EXC).gdb
 
 clean:
-	rm -fr $(EXC)
+	rm -fr rm -r [1-$(EXC)]
