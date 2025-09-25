@@ -8,7 +8,7 @@
 ; Test the program for various values of n.
 ; Create a debugger input file to show the results in both decimal and hexadecimal.
 section .data
-n dd 2
+n dd 3
 result dd 0
 section .text
 global _start
@@ -18,11 +18,10 @@ _start:
     mov edx, 0
     mov ecx, DWORD [n]
 fibonacciLoop:
-    add edx, eax
-    add edx, ebx
+    add eax, ebx
+    mov edx, eax
     mov eax, ebx
     mov ebx, edx
-    mov edx, 0
     loop fibonacciLoop
     mov DWORD [result], eax
 last:
