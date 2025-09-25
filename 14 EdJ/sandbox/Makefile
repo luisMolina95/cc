@@ -21,7 +21,7 @@ gccasm.o: gccasm.s
 	as --64 -g gccasm.s -o gccasm.o
 
 gccasm: gccasm.o
-	ld -g gccasm.o -o gccasm
+	ld -e main -g gccasm.o -o gccasm
 
 gdbgccasm: gccasm
 	gdb ./gccasm
