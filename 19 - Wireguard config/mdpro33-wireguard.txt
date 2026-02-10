@@ -1,0 +1,36 @@
+wg genkey | tee server_private | wg pubkey > server_public
+# SERVER
+[Interface]
+Address = 10.10.0.1/24
+ListenPort = 51820
+PrivateKey = SERVER_PRIVATE_KEY
+
+[Peer]
+PublicKey = LOCAL_PUBLIC_KEY
+AllowedIPs = 10.10.0.2/32
+sudo wg-quick up wg0
+sudo wg
+sudo sysctl -w net.ipv4.ip_forward=1
+# echo net.ipv4.ip_forward=1 | sudo tee -a /etc/sysctl.conf
+
+# Route UDP
+sudo iptables -t nat -A PREROUTING  -p udp --dport 7911 -j DNAT --to-destination 10.10.0.2:7911
+sudo iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
+
+# Route TCP
+sudo iptables -t nat -A PREROUTING  -p tcp --dport 7911 -j DNAT --to-destination 10.10.0.2:7911
+sudo iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
+
+nc -l -u -p 7911
+echo "hola tcp" | nc -u IP_VPS_LOCALHOST_DOESNT_WORK 7911
+
+# LOCAL PC
+[Interface]
+PrivateKey = 
+Address = 10.10.0.2/24
+
+[Peer]
+PublicKey = 
+AllowedIPs = 10.10.0.0/24
+Endpoint = VPS_IP:51820
+PersistentKeepalive = 25
