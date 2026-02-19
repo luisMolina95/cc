@@ -1,4 +1,4 @@
-# Getting Started with "Hello World" on the Commodore 64
+# "Hello World" on the Commodore 64
 - [cc65 – a freeware C compiler for 6502 based systems](https://github.com/cc65/cc65) – GitHub repository for the cc65 cross‑compiler suite.
 - [Easy 6502](https://skilldrick.github.io/easy6502/#instructions) – Tutorial/guide to 6502 assembly language by Nick Morgan.
 - [cbm64mem – Commodore 64 memory map documentation](https://sta.c64.org/cbm64mem.html) – Reference of the Commodore 64 memory layout.
