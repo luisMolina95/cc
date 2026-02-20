@@ -4,3 +4,4 @@
 - [cbm64mem – Commodore 64 memory map documentation](https://sta.c64.org/cbm64mem.html) – Reference of the Commodore 64 memory layout.
 - [C64 Assembly: Hello World – 8‑Bit / 16‑Bit Heaven](https://8bitheaven.home.blog/2020/01/07/c64‑assembly‑hello‑world/) – Example tutorial showing a “Hello World” in C64 assembly.
 - [6502 Users Manual (PDF)](http://retro.hansotten.nl/uploads/books/6502UsersManual.pdf) – Full official MOS Technology 6502 programming manual.
+- [VICE - the Versatile Commodore Emulator](https://vice-emu.sourceforge.io/) – Emulators for old 8-bit computers.
